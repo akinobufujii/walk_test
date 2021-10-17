@@ -32,7 +32,7 @@ func findFilesWithWalkDir(root string) ([]string, error) {
 
 	err := filepath.WalkDir(root, func(path string, info fs.DirEntry, err error) error {
 		if err != nil {
-			return errors.Wrap(err, "failed filepath.Walk")
+			return errors.Wrap(err, "failed filepath.WalkDir")
 		}
 
 		if info.IsDir() {
